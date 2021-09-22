@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid-19 Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://alnahian2003.github.io/corona/assets/images/favicon/favicon-32x32.png"
+        alt=""
+      />
+      <h1>C-19 METER</h1>
+    </header>
+    <main>
+      <p class="head-title">
+        Track <span id="hightlight-text">COVID-19</span> live information,
+        easily!
+      </p>
+      <div class="top-banner-container">
+        <div class="top-banner-card">
+          <h3>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-people"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+              ></path>
+            </svg>
+            NEW CASES
+          </h3>
+          <p>
+            Over <span id="new-cases" class="statistics-data"></span> worldwide.
+          </p>
+        </div>
+        <div class="top-banner-card">
+          <h3>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-emoji-dizzy"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M9.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm-5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683z"
+              ></path>
+            </svg>
+            NEW DEATHS
+          </h3>
+          <p>
+            Over
+            <span id="new-deaths" class="statistics-data"></span> worldwide.
+          </p>
+        </div>
+        <div class="top-banner-card">
+          <h3>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-people"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.995-.944v-.002.002zM7.022 13h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zm7.973.056v-.002.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+              ></path>
+            </svg>
+            TOTAL CASES
+          </h3>
+          <p>
+            Over
+            <span id="total-cases" class="statistics-data"></span> worldwide.
+          </p>
+        </div>
+        <div class="top-banner-card">
+          <h3>
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-emoji-dizzy"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M9.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm-5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683z"
+              ></path>
+            </svg>
+            TOTAL DEATHS
+          </h3>
+          <p>
+            Over
+            <span id="total-deaths" class="statistics-data"></span> worldwide.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="search-area">
+          <input
+            id="search-name"
+            type="text"
+            placeholder="Search by Country Name..."
+          />
+          <button id="search-button" onclick="getCountryInfo()">Search</button>
+        </div>
+        <!-- Custom load spinner -->
+        <div id="spinner-container" style="display: none">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div id="country-info-container">
+          <div>
+            <h1 id="country-name">Country</h1>
+            <h3>
+              Active Cases <br />
+              <span id="active-number" class="case-number">000</span>
+            </h3>
+            <h3>
+              Coronavirus Cases
+              <br />
+              <span id="total-number" class="case-number">000</span>
+            </h3>
+            <h3>
+              Deaths <br />
+              <span id="death-number" class="case-number">000</span>
+            </h3>
+            <h3>
+              Recovered <br />
+              <span id="recovered-number" class="case-number">000</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright 2021 © | A.R. Faisal</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
